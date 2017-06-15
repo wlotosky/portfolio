@@ -1,2 +1,212 @@
 @import 'partials/setup';
 @import 'partials/variables';
+
+@font-face {
+	font-family: 'Swiss721 Hv BT heavy';
+	src: url('../../fonts/ufonts.com_swis721-hv-bt-heavy.ttf') format('truetype'),
+		 url('../../fonts/ufonts.com_swis721-hv-bt-heavy.woff') format('woff'),
+		 url('../../fonts/ufonts.com_swis721_hv_bt_heavy.eot') format('embedded-opentype');
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: $textblack;
+}
+
+img {
+	display: block;
+}
+
+body {
+	font-family: 'Swiss721 Hv BT heavy';
+	color: $textblack;
+	background-color: $white;
+}
+
+.wrapper {
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+.section-header {
+	text-align: center;
+	margin: 80px 0;
+	h2 {
+		font-size: 100px;
+		margin: 0;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	.top-header {
+		text-transform: uppercase;
+		letter-spacing: 4px;
+	}
+}
+
+// HEADER
+
+header {
+	background-color: $yellow;
+	height: 100vh;
+}
+
+.header-nav {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 55px;
+	h2 {
+		margin: 0;
+	}
+	.nav-links {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		.header-nav-link {
+			font-size: 16px;
+			margin: 0 20px;
+		}
+		.header-nav-link:last-of-type {
+			margin-right: 0;
+		}
+		.fa-bars {
+			font-size: 25px;
+		}
+	}
+}
+
+.header-heroText {
+	text-align: center;
+	h1 {
+		font-size: 100px;
+		margin: 0;
+	}
+	h3 {
+		font-size: 20px;
+		margin-bottom: 34px;
+		margin-top: 200px;
+	}
+}
+
+// BIO
+
+.bio-section .wrapper {
+	display: flex;
+	justify-content: space-between;
+	.bio-image {
+		width: 50%;
+		top: -100px;
+		transform: translateY(-100px);
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			background-color: rgba(255,242,0, 0.15);
+			z-index: 1;
+		}
+		img {
+			width: 100%;
+			position: relative;
+		}
+	}
+	.bio-text {
+		width: calc(50% - 100px);
+		margin-top: 100px;
+		h2 {
+			font-size: 100px;
+			margin: 0;
+			line-height: 0.8;
+		}
+	}
+}
+
+// PORTFOLIO
+
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	.section-header {
+		margin-top: 0;
+	}
+	.portfolio-cell {
+		width: 50%;
+		height: 500px;
+		padding: 10px 50px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.cell__yellow {
+		background-color: $yellow;
+	}
+	.cell__black {
+		background-color: $textblack;
+		h3 {
+			color: $yellow;
+		}
+	}
+	h3 {
+		font-size: 36px;
+	}
+}
+
+// SKILLS 
+
+.skills-list {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: calc(50% + 75px);
+		transform: translateY(50%);
+		left: 0;
+		right: 0;
+		height: 2px;
+		background-color: $darkgrey;
+	}
+	.skills-item {
+		text-align: center;
+		width: 25%;
+		margin-bottom: 150px;
+		i {
+			color: $darkgrey;
+			font-size: 60px;
+		}
+		p {
+			color: $lightgrey;
+			font-size: 16px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+	}
+}
+
+// CONTACT 
+
+.contact-section .wrapper {
+	display: flex;
+	background-image: url(../../assets/map.png);
+	background-size: cover;
+	.contact-cell {
+		width: 50%;
+		h3 {
+			font-size: 40px;
+		}
+		p {
+			font-size: 20px;
+			margin: 0;
+			line-height: 1;
+		}
+	}
+}

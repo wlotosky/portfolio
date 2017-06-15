@@ -3,138 +3,169 @@
 <head>
 	<meta charset="UTF-8">
 	<title>My Portfolio</title>
+	<link rel="stylesheet" href="public/styles/styles.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 </head>
 <body>
-	
 	<header class="main-header">
-		<nav class="header-nav">
-			<h2 class="nav-header"></h2>
-			<ul class="nav-links">
-				<li class="header-nav-link">
-					<a href="#"></a>
-				</li>
-				<li class="header-nav-link">
-					<a href="#"></a>
-				</li>
-				<li class="header-nav-link">
-					<a href="#"></a>
-				</li>
-				<li class="header-nav-link">
-					<a href="#"></a>
-				</li>
-			</ul>
-		</nav>
+		<div class="wrapper">
+			<nav class="header-nav">
+				<h2 class="nav-header">WilliamLotosky.</h2>
+				<ul class="nav-links">
+					<li class="header-nav-link">
+						<a href="#bio">Bio</a>
+					</li>
+					<li class="header-nav-link">
+						<a href="#portfolio">Portfolio</a>
+					</li>
+					<li class="header-nav-link">
+						<a href="#skills">Skills</a>
+					</li>
+					<li class="header-nav-link">
+						<a href="#contact">Contact</a>
+					</li>
+					<li class="header-nav-link">
+						<a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 		<div class="header-heroText">
-			<h3></h3>
-			<h1>William Lotosky</h1>
-			<h4>Front-end Developer</h4>
+			<div class="wrapper">
+				<h3>Creating Websites and Web Apps</h3>
+				<h1>Front. End. Web. Dev.</h1>
+				<h4>Working at a company near you</h4>
+			</div>
 		</div>
 	</header>
 
-	<section class="bio-section">
-		
-	</section>
-
-	<section class="portfolio-section">
-		<div class="section-header">
-			<h3></h3>
-			<h2></h2>
-			<h4></h4>
-		</div>
-		<div class="portfolio-cell">
-			<h3></h3>
-			<p></p>
-			<ul class="tech-list"></ul>
-		</div>
-		<div class="portfolio-cell">
-			<h3></h3>
-			<p></p>
-			<ul class="tech-list"></ul>
-		</div>
-		<div class="portfolio-cell">
-			<h3></h3>
-			<p></p>
-			<ul class="tech-list"></ul>
-		</div>
-		<div class="portfolio-cell">
-			<h3></h3>
-			<p></p>
-			<ul class="tech-list"></ul>
+	<section class="bio-section" id="bio">
+		<div class="wrapper">
+			<div class="bio-image">
+				<img src="assets/DSC_2315.jpg" alt="">
+			</div>
+			<div class="bio-text">
+				<h2>Bio</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, culpa, deleniti. Dignissimos, enim labore culpa provident, explicabo consectetur cupiditate odit! Aliquid vero qui dignissimos dicta accusamus omnis quibusdam sed eaque, itaque quia eligendi fugit numquam atque soluta libero facilis doloribus hic iusto ipsum et delectus possimus ab laudantium illum rem. Tempora aliquid eius, dolorem repellendus enim modi temporibus, rem minus est obcaecati, suscipit quam ea provident ratione. Possimus eum maiores voluptate animi reiciendis omnis dicta tempore nam nihil? Voluptatem, tempora iste commodi. Eos obcaecati odio eius, excepturi animi doloremque voluptas dicta at quidem, voluptates. Architecto consequuntur consectetur, reprehenderit temporibus deserunt!</p>
+			</div>
 		</div>
 	</section>
 
-	<section class="skills-section">
-		<div class="section-header">
-			<h3></h3>
-			<h2></h2>
-			<h4></h4>
+	<section class="portfolio-section" id="portfolio">
+		<div class="wrapper">
+			<div class="section-header">
+				<h3 class="top-header">View My projects</h3>
+				<h2>Portfolio</h2>
+				<h4>Here's a sample of some of the work I've done</h4>
+			</div>
+			<ul class="portfolio">
+				<li class="portfolio-cell">
+					<img src="" alt="">
+				</li>
+
+				<li class="portfolio-cell cell__yellow">
+					<h3>Where My Ballers At?</h3>
+					<p></p>
+					<ul class="tech-list"></ul>
+				</li>
+				<li class="portfolio-cell cell__black">
+					<h3>Can I Eat This?</h3>
+					<p></p>
+					<ul class="tech-list"></ul>
+				</li>
+
+				<li class="portfolio-cell">
+					<img src="" alt="">
+				</li>
+				<li class="portfolio-cell">
+					
+				</li>
+
+				<li class="portfolio-cell cell__yellow">
+					<h3>Harry Potter Quiz</h3>
+					<p></p>
+					<ul class="tech-list"></ul>
+				</li>
+				<li class="portfolio-cell cell__black">
+					<h3>Responsive PSD Conversion</h3>
+					<p></p>
+					<ul class="tech-list"></ul>
+				</li>
+
+				<li class="portfolio-cell">
+					<img src="" alt="">
+				</li>
+			</ul>
+	</section>
+
+	<section class="skills-section" id="skills">
+		<div class="wrapper">
+			<div class="section-header">
+				<h3 class="top-header">Lorem ipsum dolor sit.</h3>
+				<h2>Skills</h2>
+				<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt</h4>
+			</div>
+			<ul class="skills-list">
+				<li class="skills-item">
+					<i class="devicon-html5-plain"></i>
+					<p>HTML5</p>
+				</li>
+				<li class="skills-item">
+					<i class="devicon-css3-plain"></i>
+					<p>CSS</p>
+				</li>
+				<li class="skills-item">
+					<i class="devicon-sass-original"></i>
+					<p>Sass</p>
+				</li>
+				<li class="skills-item">
+					<i class="devicon-javascript-plain"></i>
+					<p>JavaScript</p>
+				</li>
+				<li class="skills-item">
+					<i class="devicon-jquery-plain"></i>
+					<p>jQuery</p>
+				</li>
+				<li class="skills-item">
+					<i class="devicon-react-original"></i>
+					<p>React</p>
+				</li>
+				<li class="skills-item">
+					<i class="devicon-gulp-plain"></i>
+					<p>Gulp</p>
+				</li>
+				<li class="skills-item">
+					<i class="devicon-git-plain"></i>
+					<p>Git</p>
+				</li>
+			</ul>
 		</div>
-		<ul class="skills-list">
-			<li class="skills-item">
-				<h3></h3>
-				<p></p>
-				<img src="" alt="">
-			</li>
-			<li class="skills-item">
-				<h3></h3>
-				<p></p>
-				<img src="" alt="">
-			</li>
-			<li class="skills-item">
-				<h3></h3>
-				<p></p>
-				<img src="" alt="">
-			</li>
-			<li class="skills-item">
-				<h3></h3>
-				<p></p>
-				<img src="" alt="">
-			</li>
-			<li class="skills-item">
-				<h3></h3>
-				<p></p>
-				<img src="" alt="">
-			</li>
-			<li class="skills-item">
-				<h3></h3>
-				<p></p>
-				<img src="" alt="">
-			</li>
-			<li class="skills-item">
-				<h3></h3>
-				<p></p>
-				<img src="" alt="">
-			</li>
-			<li class="skills-item">
-				<h3></h3>
-				<p></p>
-				<img src="" alt="">
-			</li>
-		</ul>
 	</section>
 
 	<section class="contact-section">
-		<div class="contact-cell">
-			<h3></h3>
-			<p></p>
-			<p></p>
-		</div>
-		<div class="contact-cell">
-			<h3></h3>
-			<p></p>
-			<p></p>
-		</div>
-		<div class="contact-cell">
-			<h3></h3>
-			<p></p>
-			<p></p>
+		<div class="wrapper">
+			<div class="contact-cell">
+				<h3>Email.</h3>
+				<p>william@williamlotosky.com</p>
+				<p></p>
+			</div>
+			<div class="contact-cell">
+				<h3>Follow Me.</h3>
+				<p></p>
+				<p></p>
+			</div>
 		</div>
 	</section>
 
 	<footer class="main-footer">
-		<p></p>
-		<p></p>
+		<div class="wrapper">
+			<p>Created by William Lotosky</p>
+			<p></p>
+		</div>
 	</footer>
 
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/ba779083a1.js"></script>
+	<script src="public/scritps/main.js"></script>
 </body>
 </html>
