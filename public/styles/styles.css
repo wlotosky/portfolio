@@ -218,15 +218,6 @@ header {
     top: -100px;
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px); }
-    .bio-section .wrapper .bio-image:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      background-color: rgba(255, 242, 0, 0.15);
-      z-index: 1; }
     .bio-section .wrapper .bio-image img {
       width: 100%;
       position: relative; }
@@ -249,7 +240,6 @@ header {
   .portfolio .portfolio-cell {
     width: 50%;
     height: 500px;
-    padding: 10px 50px;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -264,10 +254,14 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .portfolio .portfolio-cell img {
+      width: 80%; }
   .portfolio .cell__yellow {
-    background-color: #FFF200; }
+    background-color: #FFF200;
+    padding: 10px 50px; }
   .portfolio .cell__black {
-    background-color: #191919; }
+    background-color: #191919;
+    padding: 10px 50px; }
     .portfolio .cell__black h3 {
       color: #FFF200; }
   .portfolio h3 {
@@ -279,7 +273,8 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  position: relative; }
+  position: relative;
+  margin-bottom: 100px; }
   .skills-list:after {
     content: '';
     position: absolute;
@@ -296,7 +291,7 @@ header {
     margin-bottom: 150px; }
     .skills-list .skills-item i {
       color: #6E6E6E;
-      font-size: 60px; }
+      font-size: 40px; }
     .skills-list .skills-item p {
       color: #b2b2b2;
       font-size: 16px;
@@ -308,7 +303,8 @@ header {
   display: -ms-flexbox;
   display: flex;
   background-image: url(../../assets/map.png);
-  background-size: cover; }
+  background-size: cover;
+  padding: 100px 0; }
   .contact-section .wrapper .contact-cell {
     width: 50%; }
     .contact-section .wrapper .contact-cell h3 {
@@ -317,3 +313,10 @@ header {
       font-size: 20px;
       margin: 0;
       line-height: 1; }
+
+footer {
+  background-color: #020202;
+  color: #555555;
+  padding: 32px 0; }
+  footer p {
+    margin: 0; }
