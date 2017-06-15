@@ -135,8 +135,13 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   font-family: 'Swiss721 Hv BT heavy';
   src: url("../../fonts/ufonts.com_swis721-hv-bt-heavy.ttf") format("truetype"), url("../../fonts/ufonts.com_swis721-hv-bt-heavy.woff") format("woff"), url("../../fonts/ufonts.com_swis721_hv_bt_heavy.eot") format("embedded-opentype"); }
 
+* {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
 ul {
-  list-style: none; }
+  list-style: none;
+  padding: 0; }
 
 a {
   text-decoration: none;
@@ -153,18 +158,25 @@ body {
 .wrapper {
   max-width: 1180px;
   margin: 0 auto; }
+  @media (max-width: 940px) {
+    .wrapper {
+      max-width: 800px; } }
+  @media (max-width: 768px) {
+    .wrapper {
+      max-width: 700px; } }
+  @media (max-width: 480px) {
+    .wrapper {
+      max-width: 440px; } }
 
 .section-header {
   text-align: center;
-  margin: 80px 0; }
+  margin: 100px 0; }
   .section-header h2 {
     font-size: 100px;
     margin: 0; }
-  .section-header h3 {
-    font-size: 20px; }
-  .section-header .top-header {
-    text-transform: uppercase;
-    letter-spacing: 4px; }
+    @media (max-width: 940px) {
+      .section-header h2 {
+        font-size: 80px; } }
 
 header {
   background-color: #FFF200;
@@ -201,6 +213,9 @@ header {
   .header-heroText h1 {
     font-size: 100px;
     margin: 0; }
+    @media (max-width: 940px) {
+      .header-heroText h1 {
+        font-size: 80px; } }
   .header-heroText h3 {
     font-size: 20px;
     margin-bottom: 34px;
@@ -214,20 +229,42 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between; }
   .bio-section .wrapper .bio-image {
-    width: 50%;
+    width: calc(50% - 50px);
     top: -100px;
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px); }
+    @media (max-width: 940px) {
+      .bio-section .wrapper .bio-image {
+        -webkit-transform: translateY(-50px);
+                transform: translateY(-50px); } }
     .bio-section .wrapper .bio-image img {
       width: 100%;
       position: relative; }
   .bio-section .wrapper .bio-text {
-    width: calc(50% - 100px);
-    margin-top: 100px; }
+    width: calc(50% - 50px);
+    margin-top: 100px;
+    padding-bottom: 100px; }
+    @media (max-width: 940px) {
+      .bio-section .wrapper .bio-text {
+        width: calc(50% - 80px);
+        margin-top: 80px;
+        padding-bottom: 80px; } }
     .bio-section .wrapper .bio-text h2 {
       font-size: 100px;
-      margin: 0;
+      margin: 0 0 80px 0;
       line-height: 0.8; }
+      @media (max-width: 940px) {
+        .bio-section .wrapper .bio-text h2 {
+          font-size: 80px; } }
+    .bio-section .wrapper .bio-text p {
+      font-size: 16px;
+      line-height: 1.5; }
+      @media (max-width: 940px) {
+        .bio-section .wrapper .bio-text p {
+          font-size: 16px; } }
+
+.portfolio-section .section-header {
+  margin-top: 0; }
 
 .portfolio {
   display: -webkit-box;
@@ -254,18 +291,32 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media (max-width: 940px) {
+      .portfolio .portfolio-cell {
+        width: 100%; } }
+    .portfolio .portfolio-cell li {
+      font-size: 18px;
+      display: inline-block; }
+      @media (max-width: 940px) {
+        .portfolio .portfolio-cell li {
+          font-size: 16px; } }
     .portfolio .portfolio-cell img {
       width: 80%; }
   .portfolio .cell__yellow {
     background-color: #FFF200;
-    padding: 10px 50px; }
+    padding: 10px 50px;
+    padding: 0 25px; }
   .portfolio .cell__black {
     background-color: #191919;
     padding: 10px 50px; }
-    .portfolio .cell__black h3 {
+    .portfolio .cell__black h3, .portfolio .cell__black li {
       color: #FFF200; }
   .portfolio h3 {
-    font-size: 36px; }
+    font-size: 36px;
+    margin-bottom: 20px; }
+    @media (max-width: 940px) {
+      .portfolio h3 {
+        font-size: 32px; } }
 
 .skills-list {
   display: -webkit-box;
@@ -273,8 +324,7 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  position: relative;
-  margin-bottom: 100px; }
+  position: relative; }
   .skills-list:after {
     content: '';
     position: absolute;
@@ -291,7 +341,7 @@ header {
     margin-bottom: 150px; }
     .skills-list .skills-item i {
       color: #6E6E6E;
-      font-size: 40px; }
+      font-size: 50px; }
     .skills-list .skills-item p {
       color: #b2b2b2;
       font-size: 16px;
@@ -302,21 +352,63 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-image: url(../../assets/map.png);
   background-size: cover;
   padding: 100px 0; }
   .contact-section .wrapper .contact-cell {
-    width: 50%; }
+    width: calc(50% - 50px);
+    padding-right: 50px; }
+    .contact-section .wrapper .contact-cell .cell-top {
+      height: 140px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
     .contact-section .wrapper .contact-cell h3 {
       font-size: 40px; }
     .contact-section .wrapper .contact-cell p {
       font-size: 20px;
       margin: 0;
       line-height: 1; }
+  .contact-section .wrapper .contact-iconList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 20px;
+    -webkit-box-align: space-between;
+        -ms-flex-align: space-between;
+            align-items: space-between;
+    margin: 0; }
+    .contact-section .wrapper .contact-iconList a {
+      margin-right: 20px; }
 
 footer {
   background-color: #020202;
   color: #555555;
   padding: 32px 0; }
+  footer .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  footer a {
+    color: #6E6E6E; }
   footer p {
     margin: 0; }
+  footer span {
+    color: white; }

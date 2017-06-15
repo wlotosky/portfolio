@@ -8,8 +8,13 @@
 		 url('../../fonts/ufonts.com_swis721_hv_bt_heavy.eot') format('embedded-opentype');
 }
 
+* {
+	transition: all 0.3s;
+}
+
 ul {
 	list-style: none;
+	padding: 0;
 }
 
 a {
@@ -30,21 +35,26 @@ body {
 .wrapper {
 	max-width: 1180px;
 	margin: 0 auto;
+	@media (max-width: 940px) {
+		max-width: 800px
+	}
+	@media (max-width: 768px) {
+		max-width: 700px;
+	}
+	@media (max-width: 480px) {
+		max-width: 440px;
+	}
 }
 
 .section-header {
 	text-align: center;
-	margin: 80px 0;
+	margin: 100px 0;
 	h2 {
 		font-size: 100px;
 		margin: 0;
-	}
-	h3 {
-		font-size: 20px;
-	}
-	.top-header {
-		text-transform: uppercase;
-		letter-spacing: 4px;
+		@media (max-width: 940px) {
+			font-size: 80px;
+		}
 	}
 }
 
@@ -84,6 +94,9 @@ header {
 	h1 {
 		font-size: 100px;
 		margin: 0;
+		@media (max-width: 940px) {
+			font-size: 80px;
+		}
 	}
 	h3 {
 		font-size: 20px;
@@ -98,26 +111,49 @@ header {
 	display: flex;
 	justify-content: space-between;
 	.bio-image {
-		width: 50%;
+		width: calc(50% - 50px);
 		top: -100px;
 		transform: translateY(-100px);
+		@media (max-width: 940px) {
+			transform: translateY(-50px);
+		}
 		img {
 			width: 100%;
 			position: relative;
 		}
 	}
 	.bio-text {
-		width: calc(50% - 100px);
+		width: calc(50% - 50px);
 		margin-top: 100px;
+		padding-bottom: 100px;
+		@media (max-width: 940px) {
+			width: calc(50% - 80px);
+			margin-top: 80px;
+			padding-bottom: 80px;
+		}
 		h2 {
 			font-size: 100px;
-			margin: 0;
+			margin: 0 0 80px 0;
 			line-height: 0.8;
+			@media (max-width: 940px) {
+				font-size: 80px;
+			}
+		}
+		p {
+			font-size: 16px;
+			line-height: 1.5;
+			@media (max-width: 940px) {
+				font-size: 16px;
+			}
 		}
 	}
 }
 
 // PORTFOLIO
+
+.portfolio-section .section-header {
+	margin-top: 0;
+}
 
 .portfolio {
 	display: flex;
@@ -133,6 +169,16 @@ header {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		@media (max-width: 940px) {
+			width: 100%;
+		}
+		li {
+			font-size: 18px;
+			display: inline-block;
+			@media (max-width: 940px) {
+				font-size: 16px;
+			}
+		}
 		img {
 			width: 80%;
 		}
@@ -140,16 +186,21 @@ header {
 	.cell__yellow {
 		background-color: $yellow;
 		padding: 10px 50px;
+		padding: 0 25px;
 	}
 	.cell__black {
 		background-color: $textblack;
 		padding: 10px 50px;
-		h3 {
+		h3, li {
 			color: $yellow;
 		}
 	}
 	h3 {
 		font-size: 36px;
+		margin-bottom: 20px;
+		@media (max-width: 940px) {
+			font-size: 32px;
+		}
 	}
 }
 
@@ -159,7 +210,6 @@ header {
 	display: flex;
 	flex-wrap: wrap;
 	position: relative;
-	margin-bottom: 100px;
 	&:after {
 		content: '';
 		position: absolute;
@@ -176,7 +226,7 @@ header {
 		margin-bottom: 150px;
 		i {
 			color: $darkgrey;
-			font-size: 40px;
+			font-size: 50px;
 		}
 		p {
 			color: $lightgrey;
@@ -191,11 +241,19 @@ header {
 
 .contact-section .wrapper {
 	display: flex;
+	justify-content: space-between;
 	background-image: url(../../assets/map.png);
 	background-size: cover;
 	padding: 100px 0;
 	.contact-cell {
-		width: 50%;
+		width: calc(50% - 50px);
+		padding-right: 50px;
+		.cell-top {
+			height: 140px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
 		h3 {
 			font-size: 40px;
 		}
@@ -203,6 +261,15 @@ header {
 			font-size: 20px;
 			margin: 0;
 			line-height: 1;
+		}
+	}
+	.contact-iconList {
+		display: flex;
+		font-size: 20px;
+		align-items: space-between;
+		margin: 0;
+		a {
+			margin-right: 20px;
 		}
 	}
 }
@@ -213,7 +280,18 @@ footer {
 	background-color: $backgroundblack;
 	color: #555555;
 	padding: 32px 0;
+	.wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	a {
+		color: $darkgrey;
+	}
 	p {
 		margin: 0;
+	}
+	span {
+		color: white;
 	}
 }
