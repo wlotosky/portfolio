@@ -1,5 +1,10 @@
 @import 'partials/setup';
 @import 'partials/variables';
+@import 'partials/header';
+@import 'partials/bio';
+@import 'partials/portfolio';
+@import 'partials/skills';
+@import 'partials/contact';
 
 @font-face {
 	font-family: 'Swiss721 Hv BT heavy';
@@ -36,10 +41,10 @@ body {
 	max-width: 1180px;
 	margin: 0 auto;
 	@media (max-width: 940px) {
-		max-width: 800px
+		max-width: 768px
 	}
 	@media (max-width: 768px) {
-		max-width: 700px;
+		max-width: 660px;
 	}
 	@media (max-width: 480px) {
 		max-width: 440px;
@@ -55,221 +60,8 @@ body {
 		@media (max-width: 940px) {
 			font-size: 80px;
 		}
-	}
-}
-
-// HEADER
-
-header {
-	background-color: $yellow;
-	height: 100vh;
-}
-
-.header-nav {
-	display: flex;
-	justify-content: space-between;
-	padding-top: 55px;
-	h2 {
-		margin: 0;
-	}
-	.nav-links {
-		display: flex;
-		align-items: center;
-		margin: 0;
-		.header-nav-link {
-			font-size: 16px;
-			margin: 0 20px;
-		}
-		.header-nav-link:last-of-type {
-			margin-right: 0;
-		}
-		.fa-bars {
-			font-size: 25px;
-		}
-	}
-}
-
-.header-heroText {
-	text-align: center;
-	h1 {
-		font-size: 100px;
-		margin: 0;
-		@media (max-width: 940px) {
-			font-size: 80px;
-		}
-	}
-	h3 {
-		font-size: 20px;
-		margin-bottom: 34px;
-		margin-top: 200px;
-	}
-}
-
-// BIO
-
-.bio-section .wrapper {
-	display: flex;
-	justify-content: space-between;
-	.bio-image {
-		width: calc(50% - 50px);
-		top: -100px;
-		transform: translateY(-100px);
-		@media (max-width: 940px) {
-			transform: translateY(-50px);
-		}
-		img {
-			width: 100%;
-			position: relative;
-		}
-	}
-	.bio-text {
-		width: calc(50% - 50px);
-		margin-top: 100px;
-		padding-bottom: 100px;
-		@media (max-width: 940px) {
-			width: calc(50% - 80px);
-			margin-top: 80px;
-			padding-bottom: 80px;
-		}
-		h2 {
-			font-size: 100px;
-			margin: 0 0 80px 0;
-			line-height: 0.8;
-			@media (max-width: 940px) {
-				font-size: 80px;
-			}
-		}
-		p {
-			font-size: 16px;
-			line-height: 1.5;
-			@media (max-width: 940px) {
-				font-size: 16px;
-			}
-		}
-	}
-}
-
-// PORTFOLIO
-
-.portfolio-section .section-header {
-	margin-top: 0;
-}
-
-.portfolio {
-	display: flex;
-	flex-wrap: wrap;
-	.section-header {
-		margin-top: 0;
-	}
-	.portfolio-cell {
-		width: 50%;
-		height: 500px;
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		@media (max-width: 940px) {
-			width: 100%;
-		}
-		li {
-			font-size: 18px;
-			display: inline-block;
-			@media (max-width: 940px) {
-				font-size: 16px;
-			}
-		}
-		img {
-			width: 80%;
-		}
-	}
-	.cell__yellow {
-		background-color: $yellow;
-		padding: 10px 50px;
-		padding: 0 25px;
-	}
-	.cell__black {
-		background-color: $textblack;
-		padding: 10px 50px;
-		h3, li {
-			color: $yellow;
-		}
-	}
-	h3 {
-		font-size: 36px;
-		margin-bottom: 20px;
-		@media (max-width: 940px) {
-			font-size: 32px;
-		}
-	}
-}
-
-// SKILLS 
-
-.skills-list {
-	display: flex;
-	flex-wrap: wrap;
-	position: relative;
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: calc(50% + 75px);
-		transform: translateY(50%);
-		left: 0;
-		right: 0;
-		height: 2px;
-		background-color: $darkgrey;
-	}
-	.skills-item {
-		text-align: center;
-		width: 25%;
-		margin-bottom: 150px;
-		i {
-			color: $darkgrey;
-			font-size: 50px;
-		}
-		p {
-			color: $lightgrey;
-			font-size: 16px;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-		}
-	}
-}
-
-// CONTACT 
-
-.contact-section .wrapper {
-	display: flex;
-	justify-content: space-between;
-	background-image: url(../../assets/map.png);
-	background-size: cover;
-	padding: 100px 0;
-	.contact-cell {
-		width: calc(50% - 50px);
-		padding-right: 50px;
-		.cell-top {
-			height: 140px;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-		}
-		h3 {
-			font-size: 40px;
-		}
-		p {
-			font-size: 20px;
-			margin: 0;
-			line-height: 1;
-		}
-	}
-	.contact-iconList {
-		display: flex;
-		font-size: 20px;
-		align-items: space-between;
-		margin: 0;
-		a {
-			margin-right: 20px;
+		@media (max-width: 480px) {
+			font-size: 60px;
 		}
 	}
 }
@@ -284,14 +76,20 @@ footer {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-	}
-	a {
-		color: $darkgrey;
+		flex-wrap: wrap;
+		@media (max-width: 480px) {
+			padding: 0 15px; 
+			text-align: center;
+		}
 	}
 	p {
 		margin: 0;
-	}
-	span {
-		color: white;
+		color: $yellow;
+		&:hover {
+			color: $darkgrey;
+		} 
+		@media (max-width: 480px) {
+			text-align: center;
+		}
 	}
 }

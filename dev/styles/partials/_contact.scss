@@ -1,0 +1,56 @@
+.contact-section .wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	background-image: url(../../assets/map.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 100px 0;
+	@media (max-width: 768px) {
+		justify-content: center;
+		padding-top: 0;
+		background-image: none;
+	}
+	.contact-cell {
+		width: calc(50% - 50px);
+		padding-right: 50px;
+		@media (max-width: 768px) {
+			width: calc(100% - 100px);
+			margin: 50px 0;
+			padding-right: 0;
+		}
+		.cell-top {
+			height: 140px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		h3 {
+			font-size: 40px;
+			@media (max-width: 768px) {
+				text-align: center;
+			}
+		}
+		p {
+			font-size: 20px;
+			margin: 0;
+			line-height: 1;
+			@media (max-width: 480px) {
+				font-size: 16px;
+			}
+		}
+	}
+	.contact-iconList {
+		display: flex;
+		font-size: 20px;
+		align-items: space-between;
+		margin: 0;
+		a {
+			margin-right: 20px;
+			&:hover {
+				color: $yellow;
+			}
+		}
+	}
+}

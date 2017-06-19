@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>My Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>William Lotosky</title>
 	<link rel="stylesheet" href="public/styles/styles.css">
+	<link rel="stylesheet" href="public/styles/animate.css">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 </head>
 <body>
@@ -11,20 +13,20 @@
 		<div class="wrapper">
 			<nav class="header-nav">
 				<h2 class="nav-header">WilliamLotosky.</h2>
-				<ul class="nav-links">
-					<li class="header-nav-link">
+				<ul class="nav-links animated">
+					<li class="header-nav-link .bio-link">
 						<a href="#bio">Bio</a>
 					</li>
-					<li class="header-nav-link">
+					<li class="header-nav-link .portfolio-link">
 						<a href="#portfolio">Portfolio</a>
 					</li>
-					<li class="header-nav-link">
+					<li class="header-nav-link .skills-link">
 						<a href="#skills">Skills</a>
 					</li>
-					<li class="header-nav-link">
+					<li class="header-nav-link .contact-link">
 						<a href="#contact">Contact</a>
 					</li>
-					<li class="header-nav-link">
+					<li class="header-nav-link hamburger">
 						<a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
 					</li>
 				</ul>
@@ -41,14 +43,13 @@
 	<section class="bio-section" id="bio">
 		<div class="wrapper">
 			<div class="bio-image">
-				<img src="assets/DSC_2327.jpg" alt="">
+				<img src="assets/bio-pic.jpg" alt="">
 			</div>
 			<div class="bio-text">
 				<h2>Bio.</h2>
-				<p>I’m Will a junior front-end dev in Toronto, I recently completed the hackerYou full-time bootcamp.  During the bootcamp I developed a strong understanding of HTML, CSS, JavaScript, jQuery and React.  I used gulp to automate my work-flow and how to access data from RESTful APIs.  For some projects I worked in pairs and larger groups, using Git and Github to collaborate.  I  enjoyed seeing many views to taking on a project, I found having different perspectives can .  Now that I’ve completed the bootcamp I’m excited to work more with React and refine my ‘Where My Ballers At?’ app.  I’m also looking forward to learning more about Node and server side JavaScript.</p>
+				<p>I’m Will, a junior front-end dev in Toronto, I recently completed the hackerYou bootcamp.  During the bootcamp I developed a love for all things JavaScript and learned to work in groups, collaborating with Git and Github.  I’m excited to work more with React and also learning about Node and server side JavaScript.</p>
 
-				<p>Prior to the bootcamp I worked as a math and science tutor, it made me adept at listening to others and trying to help them understand something that they’re struggling with.  It also enriched my understanding of concepts because to explain something I had to thoroughly grasp that concept.  When I’m not coding, you find me biking around the city, playing basketball or taking care of my friend’s cats.</p>
-
+				<p>Prior to the bootcamp I worked as a math and science tutor, it made me great at listening and helping people understand something that they’re struggling with.  When I’m not coding, you find me biking around the city, playing basketball or taking care of my friend’s cats.</p>
 			</div>
 		</div>
 	</section>
@@ -59,12 +60,12 @@
 				<h2>Portfolio.</h2>
 			</div>
 			<ul class="portfolio">
-				<li class="portfolio-cell">
+				<li class="portfolio-cell cellOne">
 					<img src="assets/lotosky_responsive-monitor-ballers.png" alt="">
 				</li>
 
-				<li class="portfolio-cell cell__yellow">
-					<h3>Where My Ballers At?</h3>
+				<li class="portfolio-cell cell__yellow cellTwo">
+					<h3>React + Firebase Web App</h3>
 					<ul class="tech-list">
 						<li>Created using:</li>
 						<li>React, </li>
@@ -78,13 +79,13 @@
 						<li>HTML5</li>
 					</ul>
 				</li>
-				<li class="portfolio-cell cell__black">
-					<h3>What's In My Food?</h3>
+				<li class="portfolio-cell cell__black cellThree">
+					<h3>REST API Web App</h3>
 					<ul class="tech-list">
 						<li>Created using:</li>
 						<li>JavaScript ES6, </li>
 						<li>jQuery, </li>
-						<li>RESTful API, </li>
+						<li>REST API, </li>
 						<li>Responsive design, </li>
 						<li>SASS, </li>
 						<li>CSS3, </li>
@@ -92,15 +93,15 @@
 					</ul>
 				</li>
 
-				<li class="portfolio-cell">
+				<li class="portfolio-cell cellFour">
 					<img src="assets/lotosky_responsive-monitor-api.png" alt="">
 				</li>
-				<li class="portfolio-cell">
+				<li class="portfolio-cell cellFive">
 					<img src="assets/lotosky_responsive-monitor-hp.png" alt="">
 				</li>
 
-				<li class="portfolio-cell cell__yellow">
-					<h3>Harry Potter Quiz</h3>
+				<li class="portfolio-cell cell__yellow cellSix">
+					<h3>jQuery Interactive Quiz</h3>
 					<ul class="tech-list">
 						<li>Created using:</li>
 						<li>JavaScript ES6, </li>
@@ -111,7 +112,7 @@
 						<li>HTML5</li>
 					</ul>
 				</li>
-				<li class="portfolio-cell cell__black">
+				<li class="portfolio-cell cell__black cellSeven">
 					<h3>Responsive PSD Conversion</h3>
 					<ul class="tech-list">
 						<li>Created using:</li>
@@ -124,7 +125,7 @@
 					</ul>
 				</li>
 
-				<li class="portfolio-cell">
+				<li class="portfolio-cell cellEight">
 					<img src="assets/lotosky_responsive-monitor-cell.png" alt="">
 				</li>
 			</ul>
@@ -216,7 +217,6 @@
 		<div class="wrapper">
 			<p>Coded by William Lotosky</p>
 			<a href="https://twitter.com/pamlau" target="_blank"><p>Photo by @pamlau</p></a>
-			<p>Designed by <span>OffWeekend</span></p>
 		</div>
 	</footer>
 
