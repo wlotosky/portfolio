@@ -5,12 +5,14 @@
 .portfolio {
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
 	.section-header {
 		margin-top: 0;
 	}
 	.portfolio-cell {
-		flex: 0 0 50%;
 		// width: 50%;
+		flex: 0 0 50%;
 		text-align: center;
 		display: flex;
 		flex-direction: column;
@@ -27,6 +29,8 @@
 		li {
 			font-size: 18px;
 			display: inline-block;
+			line-height: 1.8;
+			letter-spacing: 1px;
 			@media (max-width: 940px) {
 				font-size: 16px;
 			}
@@ -37,32 +41,34 @@
 	}
 	.cell__yellow {
 		background-color: $yellow;
-		padding: 179px 10px;
+		padding: 150px 75px;
 		margin-bottom: 100px;
 		@media (max-width: 940px) {
-			padding: 175px 10px; 
 			margin-bottom: 0;
 		}
 		@media (max-width: 768px) {
-			padding: 125px 10px; 
+			padding: 125px 50px; 
 		}
 		@media (max-width: 480px) {
-			padding: 75px 10px; 
+			padding: 75px 25px; 
 		}
 	}
 	.cell__black {
 		background-color: $textblack;
-		padding: 179px 20px;
+		padding: 150px 75px;
 		margin-bottom: 100px;
 		@media (max-width: 940px) {
-			padding: 175px 10px; 
 			margin-bottom: 0;
 		}
 		@media (max-width: 768px) {
-			padding: 125px 10px; 
+			padding: 125px 50px; 
 		}
 		@media (max-width: 480px) {
-			padding: 75px 10px; 
+			padding: 75px 25px; 
+		}
+		.portfolio-button {
+			color: $yellow;
+			border: 2px solid $yellow;
 		}
 		h3, li {
 			color: $yellow;
@@ -71,10 +77,25 @@
 	h3 {
 		font-size: 36px;
 		margin-bottom: 20px;
+		margin-top: 0;
+		letter-spacing: 2px;
 		@media (max-width: 940px) {
 			font-size: 32px;
 		}
 	}
+}
+
+.button-box {
+	display: flex;
+	justify-content: space-between;
+}
+
+.portfolio-button {
+	display: inline-block;
+	border: 2px solid $textblack;
+	padding: 10px 20px;
+	margin: 10px 20px;
+	letter-spacing: 1px;
 }
 
 .cellOne {

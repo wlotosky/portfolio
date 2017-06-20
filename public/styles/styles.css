@@ -133,7 +133,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 header {
   background-color: #FFF200;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
 
 .header-nav {
   display: -webkit-box;
@@ -198,9 +199,15 @@ header {
     .header-nav .modal .header-nav-link {
       display: block;
       margin: 25px 0; }
+      @media (max-width: 480px) {
+        .header-nav .modal .header-nav-link {
+          margin: 10px 0; } }
     .header-nav .modal .header-nav-link a {
       color: #FFF200;
       font-size: 60px; }
+      @media (max-width: 480px) {
+        .header-nav .modal .header-nav-link a {
+          font-size: 40px; } }
     .header-nav .modal .hamburger {
       position: absolute;
       bottom: 0;
@@ -209,7 +216,11 @@ header {
         font-size: 50px; }
 
 .header-heroText {
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%); }
   .header-heroText h1 {
     font-size: 90px;
     margin: 0; }
@@ -221,12 +232,10 @@ header {
         font-size: 50px; } }
   .header-heroText h3 {
     font-size: 20px;
-    margin-bottom: 34px;
-    margin-top: 200px; }
+    margin-bottom: 34px; }
     @media (max-width: 480px) {
       .header-heroText h3 {
-        font-size: 16px;
-        margin-top: 125px; } }
+        font-size: 16px; } }
 
 .bio-section .wrapper {
   display: -webkit-box;
@@ -260,24 +269,28 @@ header {
       position: relative; }
   .bio-section .wrapper .bio-text {
     width: calc(50% - 50px);
-    margin-top: 100px;
     padding-bottom: 100px; }
     @media (max-width: 940px) {
       .bio-section .wrapper .bio-text {
         width: 80%;
-        margin-top: 80px;
         padding-bottom: 80px; } }
+    @media (max-width: 768px) {
+      .bio-section .wrapper .bio-text {
+        margin-top: 60px; } }
+    @media (max-width: 480px) {
+      .bio-section .wrapper .bio-text {
+        margin-top: 0; } }
     .bio-section .wrapper .bio-text h2 {
       font-size: 100px;
-      margin: 0 0 80px 0;
+      margin: 0;
       line-height: 0.8; }
       @media (max-width: 940px) {
         .bio-section .wrapper .bio-text h2 {
           font-size: 80px;
           text-align: center; } }
     .bio-section .wrapper .bio-text p {
-      font-size: 16px;
-      line-height: 1.7; }
+      font-size: 18px;
+      line-height: 2.1; }
       @media (max-width: 940px) {
         .bio-section .wrapper .bio-text p {
           font-size: 16px; } }
@@ -290,7 +303,14 @@ header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .portfolio .section-header {
     margin-top: 0; }
   .portfolio .portfolio-cell {
@@ -313,7 +333,9 @@ header {
             align-items: center; }
     @media (max-width: 940px) {
       .portfolio .portfolio-cell {
-        width: 100%;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
         margin: 50px 0; } }
     @media (max-width: 768px) {
       .portfolio .portfolio-cell {
@@ -321,7 +343,9 @@ header {
         margin: 20px 0; } }
     .portfolio .portfolio-cell li {
       font-size: 18px;
-      display: inline-block; }
+      display: inline-block;
+      line-height: 1.8;
+      letter-spacing: 1px; }
       @media (max-width: 940px) {
         .portfolio .portfolio-cell li {
           font-size: 16px; } }
@@ -329,40 +353,58 @@ header {
       width: 80%; }
   .portfolio .cell__yellow {
     background-color: #FFF200;
-    padding: 179px 10px;
+    padding: 150px 75px;
     margin-bottom: 100px; }
     @media (max-width: 940px) {
       .portfolio .cell__yellow {
-        padding: 175px 10px;
         margin-bottom: 0; } }
     @media (max-width: 768px) {
       .portfolio .cell__yellow {
-        padding: 125px 10px; } }
+        padding: 125px 50px; } }
     @media (max-width: 480px) {
       .portfolio .cell__yellow {
-        padding: 75px 10px; } }
+        padding: 75px 25px; } }
   .portfolio .cell__black {
     background-color: #191919;
-    padding: 179px 20px;
+    padding: 150px 75px;
     margin-bottom: 100px; }
     @media (max-width: 940px) {
       .portfolio .cell__black {
-        padding: 175px 10px;
         margin-bottom: 0; } }
     @media (max-width: 768px) {
       .portfolio .cell__black {
-        padding: 125px 10px; } }
+        padding: 125px 50px; } }
     @media (max-width: 480px) {
       .portfolio .cell__black {
-        padding: 75px 10px; } }
+        padding: 75px 25px; } }
+    .portfolio .cell__black .portfolio-button {
+      color: #FFF200;
+      border: 2px solid #FFF200; }
     .portfolio .cell__black h3, .portfolio .cell__black li {
       color: #FFF200; }
   .portfolio h3 {
     font-size: 36px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    margin-top: 0;
+    letter-spacing: 2px; }
     @media (max-width: 940px) {
       .portfolio h3 {
         font-size: 32px; } }
+
+.button-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.portfolio-button {
+  display: inline-block;
+  border: 2px solid #191919;
+  padding: 10px 20px;
+  margin: 10px 20px;
+  letter-spacing: 1px; }
 
 @media (max-width: 940px) {
   .cellOne {
@@ -438,6 +480,9 @@ header {
     @media (max-width: 768px) {
       .skills-list:before {
         bottom: calc(66.6% + 75px); } }
+    @media (max-width: 480px) {
+      .skills-list:before {
+        bottom: calc(66.6% + 30px); } }
   .skills-list:after {
     content: '';
     position: absolute;
@@ -453,15 +498,19 @@ header {
       .skills-list:after {
         bottom: calc(33.3% + 75px);
         display: block; } }
+    @media (max-width: 480px) {
+      .skills-list:after {
+        bottom: calc(33.3% + 30px); } }
   .skills-list .skills-item {
     text-align: center;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    width: 25%;
     margin-bottom: 150px; }
     @media (max-width: 768px) {
       .skills-list .skills-item {
         width: 33.3%; } }
+    @media (max-width: 480px) {
+      .skills-list .skills-item {
+        margin-bottom: 60px; } }
     .skills-list .skills-item i {
       color: #6E6E6E;
       font-size: 50px; }
@@ -504,8 +553,10 @@ header {
         width: calc(100% - 100px);
         margin: 50px 0;
         padding-right: 0; } }
+    @media (max-width: 480px) {
+      .contact-section .wrapper .contact-cell {
+        margin-bottom: 0; } }
     .contact-section .wrapper .contact-cell .cell-top {
-      height: 140px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -517,17 +568,20 @@ header {
           -ms-flex-pack: justify;
               justify-content: space-between; }
     .contact-section .wrapper .contact-cell h3 {
-      font-size: 40px; }
-      @media (max-width: 768px) {
-        .contact-section .wrapper .contact-cell h3 {
-          text-align: center; } }
+      font-size: 40px;
+      margin-top: 0; }
     .contact-section .wrapper .contact-cell p {
       font-size: 20px;
       margin: 0;
-      line-height: 1; }
+      line-height: 2.1; }
       @media (max-width: 480px) {
         .contact-section .wrapper .contact-cell p {
           font-size: 16px; } }
+    .contact-section .wrapper .contact-cell p:first-of-type {
+      margin-bottom: 60px; }
+  @media (max-width: 768px) {
+    .contact-section .wrapper .contact-cell:first-of-type {
+      margin-top: 0; } }
   .contact-section .wrapper .contact-iconList {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -538,7 +592,9 @@ header {
             align-items: space-between;
     margin: 0; }
     .contact-section .wrapper .contact-iconList a {
-      margin-right: 20px; }
+      margin-right: 20px;
+      -webkit-transition: all 0.1s;
+      transition: all 0.1s; }
       .contact-section .wrapper .contact-iconList a:hover {
         color: #FFF200; }
 
@@ -581,10 +637,20 @@ body {
 
 .section-header {
   text-align: center;
-  margin: 100px 0; }
+  margin: 90px 0; }
+  @media (max-width: 940px) {
+    .section-header {
+      margin: 70px 0; } }
+  @media (max-width: 768px) {
+    .section-header {
+      margin: 60px 0; } }
+  @media (max-width: 480px) {
+    .section-header {
+      margin: 50px 0; } }
   .section-header h2 {
     font-size: 100px;
-    margin: 0; }
+    margin: 0;
+    letter-spacing: 5px; }
     @media (max-width: 940px) {
       .section-header h2 {
         font-size: 80px; } }

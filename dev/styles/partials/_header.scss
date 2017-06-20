@@ -1,6 +1,7 @@
 header {
 	background-color: $yellow;
 	height: 100vh;
+	position: relative;
 }
 
 .header-nav {
@@ -57,10 +58,16 @@ header {
 		.header-nav-link {
 			display: block;
 			margin: 25px 0;
+			@media(max-width: 480px) {
+				margin: 10px 0;
+			}
 		}
 		.header-nav-link a{
 			color: $yellow;
 			font-size: 60px;
+			@media(max-width: 480px) {
+				font-size: 40px;
+			}
 		}
 		.hamburger {
 			position: absolute;
@@ -75,6 +82,9 @@ header {
 
 .header-heroText {
 	text-align: center;
+	position: relative;
+	top: 50%;
+	transform: translateY(-100%);
 	h1 {
 		font-size: 90px;
 		margin: 0;
@@ -88,10 +98,8 @@ header {
 	h3 {
 		font-size: 20px;
 		margin-bottom: 34px;
-		margin-top: 200px;
 		@media (max-width: 480px) {
 			font-size: 16px;
-			margin-top: 125px;
 		}
 	}
 }
